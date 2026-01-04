@@ -76,3 +76,28 @@ body {
     animation: none;
   }
 }
+
+@keyframes ka-glow {
+  0% {
+    opacity: 0.35;
+    filter: blur(10px);
+  }
+  50% {
+    opacity: 0.6;
+    filter: blur(16px);
+  }
+  100% {
+    opacity: 0.35;
+    filter: blur(10px);
+  }
+}
+
+.ka-glow {
+  animation: ka-glow 3.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ka-glow {
+    animation: none;
+  }
+}

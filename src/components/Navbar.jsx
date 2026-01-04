@@ -1,11 +1,20 @@
 import React, { useEffect, useMemo, useState } from "react";
 import Magnetic from "../components/Magnetic.jsx";
+import KAAchievementToast from "../components/KAAchievementToast.jsx";
 
 export default function Navbar({ onReset, rightPillLabel = "Tools Stack", rightCTA = "Let’s connect" }) {
   const links = ["Home", "Projects", "Experience", "Skills", "Education", "Contact"];
 
   const [toolsOpen, setToolsOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const [kaToastOpen, setKaToastOpen] = useState(false);
+  const [kaToastKey, setKaToastKey] = useState(0);
+  
+  function fireKAToast() {
+    setKaToastOpen(true);
+    setKaToastKey((k) => k + 1);
+  }
 
   const tools = useMemo(
     () => [
@@ -61,13 +70,28 @@ export default function Navbar({ onReset, rightPillLabel = "Tools Stack", rightC
 
   return (
     <>
+      <KAAchievementToast
+          key={kaToastKey}
+          open={kaToastOpen}
+          onClose={() => setKaToastOpen(false)}
+          title="Achievement unlocked"
+          subtitle="You discovered an Easter egg!"
+      />
+
+      {/* ===================== NAVBAR ===================== */}
       <header className="sticky top-0 z-40 bg-white/70 backdrop-blur-md border-b border-slate-200/80 dark:bg-slate-950/55 dark:border-slate-700/70">
         <div className="mx-auto flex w-full max-w-[85rem] items-center justify-between px-5 py-4 sm:px-6 lg:px-8 lg:py-4">
           {/* Left: Logo + Desktop links */}
           <div className="flex items-center gap-3 sm:gap-4">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-fg text-bg font-semibold">
+            <button
+              type="button"
+              onClick={fireKAToast}
+              aria-label="KA easter egg"
+              className="flex h-11 w-11 items-center justify-center rounded-2xl bg-fg text-bg font-semibold transition-transform active:scale-[0.98] focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
+            >
               KA
-            </div>
+            </button>
+
 
             {/* Desktop nav */}
             <nav className="hidden md:flex items-center gap-7 ml-6">
