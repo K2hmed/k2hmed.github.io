@@ -1,121 +1,112 @@
 // src/data/projects.js
 export const projects = [
     {
+      kicker: "CASE STUDY",
       title: "30-Day Hospital Readmission Prediction",
       impact:
         "Built a predictive analytics system using multi-source healthcare data to identify patients at high risk of 30-day readmission, improving model performance by ~70% AUC.",
-      chips: ["Predictive Modeling", "Healthcare Analytics"],
+      chips: ["Predictive Modeling", "Data Integration", "Healthcare Analytics"],
       github: "https://github.com/K2hmed/<REPO_NAME_HERE>",
       demo: null,
       details:
-        "End-to-end readmission risk modeling using integrated clinical + geographic datasets to support decision-making for high-risk patient cohorts.",
+        "End-to-end readmission risk modeling using integrated clinical and geographic datasets to support earlier, more targeted interventions for high-risk patient cohorts.",
+      whatBuilt:
+      "A reproducible pipeline that assembles patient-level features, trains and evaluates multiple models, and produces risk scores for downstream analysis and reporting.",
+      outcome:
+      "Improved predictive performance by ~70% AUC versus baseline, with evaluation tailored for imbalanced readmission outcomes.",
       stack: ["Python", "SQL", "Pandas", "XGBoost", "Random Forest", "Logistic Regression"],
       bullets: [
-        "Unified multi-source datasets (MIMIC-IV, eICU, CIHI, ODHF) into a single modeling-ready table.",
-        "Engineered clinical, utilization, and demographic features; handled missingness with imputation.",
-        "Optimized for imbalanced outcomes using AUC and threshold tuning; compared tuned vs baseline models.",
+        "Integrated MIMIC-IV, eICU, CIHI, and ODHF into a single patient-level modeling table with consistent keys, timelines, and missingness handling.",
+        "Engineered features across demographics, utilization history, comorbidities, labs, and facility context; applied imputation and leakage-safe preprocessing.",
+        "Benchmarked Logistic Regression, Random Forest, and XGBoost; optimized for class imbalance with AUC-first selection and threshold tuning, comparing tuned vs baseline performance.",
       ],
     },
 
     {
-      title: "Job Alert Board",
+      kicker: "CASE STUDY",
+      title: "Job Alert Board Automation",
       impact:
-        "Built an automated job monitoring pipeline that detects new postings early, filters by keywords/location, deduplicates results, and delivers alerts via email and Slack.",
-      chips: ["Automation Pipelines", "Data Ingestion", "Monitoring"],
+        "Built an automated job monitoring pipeline that detects new postings early, filters by keyword/location, deduplicates results, and sends alerts via email and Slack.",
+      chips: ["Automation Pipelines", "Data Ingestion", "Monitoring & Reliability"],
       github: "https://github.com/K2hmed/<REPO_NAME_HERE>",
       demo: null,
       details:
-        "Production-minded automation system that normalizes postings from Workday-style boards and notifies on net-new matches.",
-      stack: ["Python", "GitHub Actions", "JSON", "Email", "Slack Webhooks"],
+        "A production-minded automation system that continuously scans Workday and non-Workday job boards, normalizes links and timestamps, and delivers reliable alerts with built-in health monitoring.",
+      whatBuilt:
+      "A scheduled ingestion and alerting pipeline that parses 7–8 job boards every 30 minutes, canonical URL handling, recency filtering, deduplication state, multi-channel notifications, and includes heartbeat notifications to confirm system health during idle periods.",
+      outcome:
+      "Reduced manual job-checking and eliminated duplicate alerts by persisting seen state and validating links before notifying.",
+      stack: ["Python", "GitHub Actions", "JSON", "Email (SMTP)", "Slack Webhooks"],
       bullets: [
-        "Implemented canonical URL rewriting and posted-date parsing to avoid broken links and stale alerts.",
-        "Added persistent deduplication (seen state) to prevent repeat notifications across runs.",
-        "Designed keyword + location filters to keep alerts precise and actionable.",
+        "Implemented Workday and non-Workday ingestion with URL normalization and posted-date parsing to prevent broken links and stale notifications.",
+        "Added deduplication via persistent state (seen cache) so alerts are sent once per unique job.",
+        "Integrated email + Slack notifications and tuned keyword/location filters to keep alerts high-signal.",
       ],
     },
 
     {
-      title: "LLM-Based Requirement Analysis Tool",
+      kicker: "CASE STUDY",
+      title: "LLM-Based Requirement Analysis Pipeline",
       impact:
-        "Built a document-to-user-stories pipeline that extracts requirements, generates structured user stories, and outputs test cases for faster analysis and QA readiness.",
-      chips: ["NLP", "Automation", "Product Analytics"],
+        "An LLM-powered pipeline that transforms requirement documents into structured user stories and QA-ready test cases, reducing manual analysis and review effort.",
+      chips: ["LLM Pipelines", "Workflow Automation", "Product & QA Analytics"],
       github: "https://github.com/K2hmed/<REPO_NAME_HERE>",
       demo: null,
       details:
-        "A workflow that ingests requirement documents and produces consistent, reviewable artifacts for product and QA teams.",
-      stack: ["Python", "LLMs", "Prompting", "Parsing", "Evaluation"],
+        "A deterministic document-to-artifacts pipeline that transforms unstructured requirements into reviewable, traceable product and QA outputs.",
+      whatBuilt:
+      "A Python-based LLM pipeline that ingests requirement documents, enforces structured JSON outputs, and produces traceable EPICs, user stories, and QA-grade test cases in tabular form.",
+      outcome:
+      "Standardized requirement analysis and test-case generation, making LLM behavior auditable, reproducible, and suitable for real review workflows.",
+      stack: ["Python", "LLM APIs", "Prompt Engineering", "JSON Validation", "Pandas"],
       bullets: [
-        "Generated user stories and test cases in a consistent format to reduce manual effort.",
-        "Added guardrails for structure and traceability from requirement → story → test case.",
-        "Documented the system with clear setup and reproducible runs.",
+        "Designed a multi-stage LLM workflow (requirements → stories → test cases) with strict JSON schemas to ensure deterministic, machine-parseable outputs.",
+        "Implemented validation and error handling to prevent malformed model responses from propagating downstream.",
+        "Exported results into a clean, reviewer-ready Excel format, enabling immediate inspection without manual cleanup.",
       ],
     },
 
     {
+      kicker: "CASE STUDY",
       title: "TTC Delay Analysis",
       impact:
         "Analyzed TTC delay patterns to surface recurring hotspots by route, time, and category, enabling clearer operational insights and reporting.",
-      chips: ["Analytics", "Visualization", "Time Series"],
+      chips: ["Analytics", "Business Intelligence", "Time Series"],
       github: "https://github.com/K2hmed/<REPO_NAME_HERE>",
       demo: null,
       details:
-        "Exploratory and diagnostic analysis turning public transit delay data into actionable patterns and visuals.",
-      stack: ["Python", "Pandas", "Matplotlib", "SQL"],
+        "End-to-end analytics pipeline that standardizes fragmented transit delay data and enables operational insights through BI dashboards.",
+      whatBuilt:
+        "A scalable ETL and analytics workflow that ingests, cleans, normalizes, and enriches multi-year TTC bus and subway delay data for downstream BI and reporting.",
+      outcome:
+        "Produced a unified, feature-rich dataset powering Tableau and Power BI dashboards to analyze delay drivers by route, time, and incident category.",
+      stack: ["Python", "Pandas", "NumPy", "SQL", "Tableau", "Power BI"],
       bullets: [
-        "Cleaned and standardized event categories and timestamps for reliable aggregation.",
-        "Identified peak delay windows and route-level concentration of incidents.",
-        "Created clear visual summaries for non-technical audiences.",
+        "Ingested and standardized 12 Excel files (bus + subway) into a single long-format dataset (~600K+ records) with consistent schemas.",
+        "Engineered temporal and categorical features (peak periods, incident classes, time-of-day) to support operational and time-series analysis.",
+        "Enabled Tableau and Power BI dashboards for route-level, mode-level, and peak vs off-peak performance insights.",
       ],
     },
 
     {
-      title: "AAPL Stock Data Analysis",
-      impact:
-        "Built a compact market analysis workflow exploring price movement, volatility, and indicators to support data-driven investment hypotheses.",
-      chips: ["Analytics", "Feature Engineering", "Visualization"],
-      github: "https://github.com/K2hmed/<REPO_NAME_HERE>",
-      demo: null,
-      details:
-        "Lightweight financial time-series analysis focusing on interpretable trends and signals.",
-      stack: ["Python", "Pandas", "NumPy", "Matplotlib"],
-      bullets: [
-        "Computed rolling indicators and volatility measures for interpretability.",
-        "Compared trend regimes across time windows and market conditions.",
-        "Packaged results into a clean notebook-style report.",
-      ],
-    },
-
-    {
+      kicker: "CASE STUDY",
       title: "AI Guardian",
       impact:
-        "Designed a safety-focused AI assistant concept with structured guardrails and evaluation checks to reduce risky outputs and improve reliability.",
-      chips: ["AI Safety", "Evaluation", "Systems Design"],
+        "Designed a guardrailed AI assistant system with structured constraints, safety checks, and evaluation workflows to reduce unsafe or unreliable outputs.",
+      chips: ["AI Safety", "Evaluation & Testing", "Systems Design"],
       github: "https://github.com/K2hmed/<REPO_NAME_HERE>",
       demo: null,
       details:
-        "A guardrailed assistant design exploring policy-aware responses and structured evaluation.",
-      stack: ["Python", "LLMs", "Prompting", "Testing"],
+        "A safety-focused AI assistant design exploring guardrails, policy-aware behavior, and structured evaluation.",
+      whatBuilt:
+        "A modular AI assistant architecture that enforces structured constraints, refusal behaviors, and testable evaluation scenarios for unsafe or ambiguous requests.",
+      outcome:
+        "Demonstrated how guardrails, explicit refusal logic, and evaluation prompts can improve reliability and predictability in AI-driven systems.",
+      stack: ["Python", "Prompt Engineering", "Testing & Evaluation", "Systems Design"],
       bullets: [
-        "Implemented structured constraints and refusal behaviors for unsafe requests.",
-        "Created test prompts to evaluate behavior consistency across scenarios.",
-        "Documented design choices and limitations clearly.",
-      ],
-    },
-
-    {
-      title: "VQA System",
-      impact:
-        "Built a visual question answering prototype that combines image features with language understanding to answer natural-language queries about images.",
-      chips: ["Computer Vision", "NLP", "Modeling"],
-      github: "https://github.com/K2hmed/<REPO_NAME_HERE>",
-      demo: null,
-      details:
-        "Prototype multimodal pipeline exploring image-text fusion and evaluation behavior.",
-      stack: ["Python", "PyTorch", "Transformers", "Evaluation"],
-      bullets: [
-        "Processed image inputs into embeddings and fused them with text encodings.",
-        "Evaluated responses across a small benchmark set for qualitative correctness.",
-        "Packaged training/inference steps into a reproducible workflow.",
+        "Designed policy-aware constraints and refusal behaviors to handle unsafe or restricted user requests.",
+        "Created structured evaluation prompts and test cases to assess consistency and failure modes across scenarios.",
+        "Documented architecture, assumptions, and limitations clearly to support transparency, testing, and future iteration.",
       ],
     },
   ];

@@ -75,6 +75,7 @@ export default function ProjectCard({ project }) {
   const data = useMemo(() => {
     const p = project || {};
     return {
+      kicker: p.kicker ?? "PROJECT",
       title: p.title ?? "Untitled Project",
       impact: p.impact ?? "Add a 1–2 line impact statement here.",
       chips: p.chips ?? ["ML", "NLP", "Healthcare"],
@@ -88,6 +89,8 @@ export default function ProjectCard({ project }) {
         p.details ??
         "Add a fuller description: problem, approach, stack, and measurable outcomes.",
       stack: p.stack ?? ["Python", "Pandas", "XGBoost"],
+      whatBuilt: p.whatBuilt ?? null,
+      outcome: p.outcome ?? null,
       bullets: p.bullets ?? [
         "What you built and why it matters.",
         "A measurable result or performance lift.",
@@ -153,7 +156,7 @@ export default function ProjectCard({ project }) {
         <div className="p-6 sm:p-8">
           <div className="flex items-start justify-between gap-4">
             <div>
-              <div className="text-xs tracking-widest text-muted">PROJECT</div>
+              <div className="text-xs tracking-widest text-muted">{data.kicker}</div>
               <h3 className="mt-2 font-display text-2xl sm:text-3xl font-semibold text-fg">
                 {data.title}
               </h3>
@@ -169,6 +172,20 @@ export default function ProjectCard({ project }) {
           </div>
 
           <p className="mt-4 text-muted leading-relaxed">{data.details}</p>
+
+          {data.whatBuilt && (
+            <p className="mt-4 text-sm text-muted leading-relaxed">
+              <span className="font-semibold text-fg">What I built:</span>{" "}
+              {data.whatBuilt}
+            </p>
+          )}
+          
+          {data.outcome && (
+            <p className="mt-2 text-sm text-muted leading-relaxed">
+              <span className="font-semibold text-fg">Outcome:</span>{" "}
+              {data.outcome}
+            </p>
+          )}
 
           {/* Chips / stack */}
           <div className="mt-5 flex flex-wrap gap-2">

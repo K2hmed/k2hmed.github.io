@@ -58,8 +58,10 @@ export default function PortfolioView({ visitorType, onSwitch }) {
           </h1>
 
           <p className="mt-5 sm:mt-6 max-w-xl text-muted text-[16px] sm:text-[17px] leading-relaxed">
-            I design predictive systems, analytics dashboards, and automation pipelines used 
-            in healthcare and business decision-making.
+            Applied data and analytics builder with hands-on experience delivering predictive systems, 
+            analytics dashboards, and automation pipelines. Experienced in taking real-world data from 
+            ingestion and modeling through deployment-ready solutions that support healthcare and business 
+            decision-making.
           </p>
 
           <p className="mt-5 sm:mt-6 text-sm font-semibold text-accent">
@@ -162,7 +164,7 @@ export default function PortfolioView({ visitorType, onSwitch }) {
               CURRENTLY WORKING ON
             </div>
             <div className="mt-2 text-[15px] leading-relaxed text-fg">
-              Research Assistant: AI chatbot qualitative study
+              Building decision dashboards from predictive model outputs
             </div>
           </div>
 
@@ -181,7 +183,7 @@ export default function PortfolioView({ visitorType, onSwitch }) {
       <Section
         id="projects"
         title="Project Highlights"
-        subtitle="Predictive systems, decision dashboards, and data pipelines built across healthcare, business, and finance."
+        subtitle="Applied systems for prediction, analytics, and decision-making across healthcare, business, and finance."
       >
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((p, i) => (
@@ -197,50 +199,50 @@ export default function PortfolioView({ visitorType, onSwitch }) {
       <Section
         id="experience"
         title="Experience"
-        subtitle="Highlights from AI engineering, research, and applied ML delivery."
+        subtitle="Applied experience building predictive systems, analytics workflows, and production data tools."
       >
         <div className="space-y-5">
           {[
             {
-              title: "Graduate Researcher / AI Engineer (Healthcare)",
-              org: "Toronto Metropolitan University",
-              dates: "Sep 2024 – Aug 2025",
+              title: "Data Science Mentor",
+              org: "SciXchange · Toronto, ON",
+              dates: "Jan 2025 – May 2025",
+              description:
+                "Guided student teams through the end-to-end development of predictive ML applications and analytics dashboards, emphasizing problem framing, data validation, and deployment-ready thinking.",
               bullets: [
-                "Built end-to-end AI pipelines on 7,900+ patient records, blending structured and unstructured clinical data.",
-                "Developed predictive and survival models with robust validation, interpretability, and reliability focus.",
-                "Designed production-grade Python workflows for ingestion, feature engineering, training, and evaluation.",
+                "Mentored teams in building predictive models and Power BI dashboards using Python, focusing on feature engineering, evaluation, and interpretability.",
+                "Introduced data validation and model-readiness practices, improving project completion and delivery quality by 25%.",
+                "Reviewed model outputs and visualizations to ensure analytical rigor and clear communication for non-technical audiences.",
               ],
             },
             {
-              title: "Machine Learning Engineer",
-              org: "Company (Remote)",
-              dates: "Jan 2024 – May 2024",
+              title: "Data Analytics Intern",
+              org: "Accenture · Remote",
+              dates: "Oct 2024 – Nov 2024",
+              description:
+                "Delivered data-driven analysis and dashboards to support marketing performance optimization and stakeholder decision-making.",
               bullets: [
-                "Delivered production-style generative AI pipelines to accelerate content creation by ~40%.",
-                "Built inference and evaluation workflows that bridged experimentation to deployment-ready systems.",
+                "Conducted campaign performance analysis to identify optimization opportunities, contributing to 18% ROI growth.",
+                "Built interactive Tableau dashboards that translated complex performance metrics into clear insights for non-technical stakeholders.",
+                "Partnered with cross-functional teams to align analytical outputs with business objectives and reporting standards.",
               ],
             },
             {
-              title: "Graduate Assistant (Technical Systems Support)",
-              org: "Toronto Metropolitan University",
-              dates: "Jan 2025 – Aug 2025",
+              title: "Business Data Analyst",
+              org: "Desert King Waterproofing LLC · Dubai, UAE",
+              dates: "Aug 2022 – Mar 2024",
+              description:
+                "Owned analytics and automation initiatives to improve forecasting accuracy, operational efficiency, and executive reporting.",
               bullets: [
-                "Supported ML pipeline debugging, validation, and failure analysis under time constraints.",
-                "Provided technical support for student labs and system-level troubleshooting.",
-              ],
-            },
-            {
-              title: "Quality Engineering & Assurance Intern",
-              org: "Cognizant",
-              dates: "Feb 2023 – Jul 2023",
-              bullets: [
-                "Automated QA testing with Selenium-Java, reducing manual effort and improving site performance.",
-                "Collaborated with cross-functional teams to improve test coverage and defect detection.",
+                "Deployed predictive models to forecast project costs and schedule delays, improving budget accuracy by 32%.",
+                "Automated ETL workflows using Python and SQL, reducing reporting turnaround time by 40%.",
+                "Designed Power BI dashboards to track KPIs and operational metrics, enabling data-driven executive decision-making.",
+                "Collaborated closely with finance and operations to ensure data integrity, consistency, and actionable reporting.",
               ],
             },
           ].map((r, i) => (
             <Reveal key={r.title} delay={i * 80} y={14}>
-              <Role title={r.title} org={r.org} dates={r.dates} bullets={r.bullets} />
+              <Role title={r.title} org={r.org} dates={r.dates} description={r.description} bullets={r.bullets} />
             </Reveal>
           ))}
         </div>
@@ -250,38 +252,38 @@ export default function PortfolioView({ visitorType, onSwitch }) {
       <Section
         id="skills"
         title="Skills"
-        subtitle="Tools and workflows for production-minded AI delivery."
+        subtitle="Tools and workflows for predictive modeling, analytics, and automation delivery."
       >
         <div className="grid gap-6 lg:grid-cols-3">
           {[
             {
-              title: "Applied AI",
+              title: "Predictive Modeling & Applied ML",
               items: [
-                "Document Understanding",
-                "NLP + Entity Extraction",
-                "RAG + LLM Workflows",
-                "Predictive Modeling",
-                "Model Validation",
+                "Classification and risk modeling",
+                "Feature engineering and imputation",
+                "Model evaluation (AUC, F1, calibration)",
+                "Imbalanced learning and threshold tuning",
+                "Explainability and error analysis",
               ],
             },
             {
-              title: "Engineering & MLOps",
+              title: "Automation & Delivery",
               items: [
-                "Python",
-                "REST Inference Pipelines",
-                "Model Deployment",
-                "Monitoring + Iteration",
-                "Git + CI/CD Concepts",
+                "Python analytics and data workflows",
+                "ETL automation and scheduling",
+                "API integration and notifications",
+                "Monitoring, logging, and heartbeat checks",
+                "Reproducible pipelines and documentation",
               ],
             },
             {
-              title: "Data & Cloud",
+              title: "Data, BI & Cloud",
               items: [
-                "AWS (EC2, S3, SageMaker)",
-                "Azure (OpenAI, Notebooks)",
-                "GCP",
-                "ETL + Data Validation",
-                "SQL + PySpark",
+                "SQL and analytics data modeling",
+                "Dashboards (Power BI, Tableau)",
+                "Data quality checks and validation",
+                "AWS and Azure fundamentals",
+                "Scalable processing (PySpark)",
               ],
             },
           ].map((s, i) => (
@@ -296,7 +298,7 @@ export default function PortfolioView({ visitorType, onSwitch }) {
       <Section
         id="education"
         title="Education"
-        subtitle="Academic foundations and recognitions."
+        subtitle="Academic training supporting applied data science and analytics."
       >
         <div className="grid gap-6 lg:grid-cols-3">
           {[
@@ -304,6 +306,8 @@ export default function PortfolioView({ visitorType, onSwitch }) {
               title: "MSc, Data Science & Analytics",
               org: "Toronto Metropolitan University",
               meta: "GPA: 3.94/4.00",
+              coursework:
+                "Selected Coursework: Machine Learning, Data Mining and Prescriptive Analytics, Big Data Systems and Tooling, Advanced Data Visualization, Deep Learning, Algorithms for Data Systems",
             },
             {
               title: "BSc, Computer Science",
@@ -312,7 +316,7 @@ export default function PortfolioView({ visitorType, onSwitch }) {
             },
           ].map((e, i) => (
             <Reveal key={e.title} delay={i * 70} y={12}>
-              <EduCard title={e.title} org={e.org} meta={e.meta} />
+              <EduCard title={e.title} org={e.org} meta={e.meta} coursework={e.coursework} />
             </Reveal>
           ))}
         </div>
@@ -321,31 +325,56 @@ export default function PortfolioView({ visitorType, onSwitch }) {
       {/* MENTOR NOTES */}
       <Section
         id="mentor"
-        title="Mentor Notes"
-        subtitle="Feedback from teaching and mentoring moments."
+        title="Mentor & Stakeholder Notes"
+        subtitle="Feedback on analytical rigor, data reasoning, and practical delivery across projects and teams."
       >
-        <div className="grid gap-6 lg:grid-cols-3">
-          {[
+        
+        {(() => {
+          const quotes = [
             {
               quote:
-                "Explained core Java concepts with patience and clarity. Students left labs confident and prepared.",
+                "Explains complex data concepts clearly and emphasizes validation, assumptions, and interpretability. Students consistently produced stronger analyses and more defensible results.",
               who: "Professor, Software Engineering",
             },
             {
               quote:
-                "Broke down SQL queries step-by-step and helped me build a working analytics project quickly.",
+                "Delivered clear, decision-ready analyses under tight timelines. Insights were easy for non-technical stakeholders to interpret and act on.",
+              who: "Project Stakeholder, Data Analytics",
+            },
+            {
+              quote:
+                "Helped me break down SQL logic and modeling decisions step by step. I learned how to reason about data quality and turn raw data into usable insights quickly.",
               who: "Student, Data Analytics",
             },
             {
-              quote: "Practical and encouraging support on coursework. An excellent mentor.",
+              quote:
+                "Built reliable analytics workflows and dashboards that leadership used for planning and forecasting. Strong attention to data accuracy and operational relevance.",
+              who: "Manager, Business Analytics",
+            },
+            {
+              quote:
+                "Focused on how to explain results clearly, not just get the right answer. My dashboards and analyses became much easier for non-technical reviewers to understand.",
               who: "Student, Computer Science",
             },
-          ].map((q, i) => (
-            <Reveal key={q.who} delay={i * 70} y={12}>
-              <QuoteCard quote={q.quote} who={q.who} />
-            </Reveal>
-          ))}
-        </div>
+          ];
+          
+          const loop = [...quotes, ...quotes];
+          
+          return (
+            <div className="mentor-marquee mentor-marquee--fade mentor-viewport">
+              <div
+                className="mentor-marquee__track gap-6"
+                style={{ ["--marquee-duration"]: "30s" }}
+              >
+                {loop.map((q, i) => (
+                  <div key={`${q.who}-${i}`} className="mentor-item">
+                    <QuoteCard quote={q.quote} who={q.who} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          );
+        })()}
       </Section>
 
       {/* CONTACT */}
@@ -401,7 +430,7 @@ function Stat({ value, label }) {
   );
 }
 
-function Role({ title, org, dates, bullets }) {
+function Role({ title, org, dates, description,bullets }) {
   return (
     <Card>
       <div className="flex flex-wrap items-start justify-between gap-3">
@@ -411,6 +440,12 @@ function Role({ title, org, dates, bullets }) {
         </div>
         <div className="text-sm text-muted">{dates}</div>
       </div>
+
+      {description && (
+        <p className="mt-3 text-sm text-fg/70 leading-relaxed">
+          {description}
+        </p>
+      )}
 
       <ul className="mt-4 list-disc space-y-2 pl-5 text-fg/80">
         {bullets.map((b) => (
@@ -434,20 +469,26 @@ function SkillCard({ title, items }) {
   );
 }
 
-function EduCard({ title, org, meta }) {
+function EduCard({ title, org, meta, coursework }) {
   return (
     <Card>
       <div className="text-xl font-semibold text-fg">{title}</div>
       <div className="mt-2 text-muted">{org}</div>
       <div className="mt-4 text-muted">{meta}</div>
+
+      {coursework && (
+        <div className="mt-2 text-sm text-muted leading-relaxed">
+          {coursework}
+        </div>
+      )}
     </Card>
   );
 }
 
 function QuoteCard({ quote, who }) {
   return (
-    <Card>
-      <div className="text-fg">“{quote}”</div>
+    <Card className="h-full flex flex-col justify-between">
+      <div className="text-fg leading-relaxed clamp-3">“{quote}”</div>
       <div className="mt-6 text-sm font-semibold text-muted">— {who}</div>
     </Card>
   );

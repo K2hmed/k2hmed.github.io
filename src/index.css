@@ -101,3 +101,63 @@ body {
     animation: none;
   }
 }
+
+/* Mentor carousel */
+@keyframes mentor-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.mentor-marquee {
+  overflow: hidden;
+}
+
+.mentor-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: mentor-marquee var(--marquee-duration, 26s) linear infinite;
+  will-change: transform;
+}
+
+.mentor-marquee--fade {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.mentor-marquee:hover .mentor-marquee__track {
+  animation-play-state: paused;
+}
+
+.mentor-viewport {
+  width: min(1128px, 100%);
+  margin-inline: auto;
+}
+
+.mentor-item {
+  width: 360px;
+  flex: 0 0 360px;
+}
+
+/* 3-line clamp (if you haven't already) */
+.clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .mentor-marquee__track {
+    animation: none !important;
+    transform: none !important;
+  }
+}
