@@ -6,6 +6,7 @@ import Reveal from "../components/Reveal.jsx";
 import ProjectCard from "../components/ProjectCard.jsx";
 import Magnetic from "../components/Magnetic.jsx";
 import KpiStat from "../components/KpiStat.jsx";
+import { projects } from "../data/projects";
 
 export default function PortfolioView({ visitorType, onSwitch }) {
   const isStudent = visitorType === "student";
@@ -13,17 +14,17 @@ export default function PortfolioView({ visitorType, onSwitch }) {
   const visitorCard = isStudent
     ? {
         label: "STUDENT",
-        title: "Looking for tutoring or project support",
+        title: "Guidance on applied data and ML projects",
         body:
-          "I help with ML foundations, Python workflows, and project debugging. If you’re stuck, I can guide your next steps and review your approach.",
-        ctaText: "Ask About Tutoring",
+          "I provide guidance on ML foundations, Python workflows, and end-to-end project development. I help students think through design choices, debug effectively, and improve their overall approach.",
+        ctaText: "Discuss Your Project",
         ctaHref: "#contact",
       }
     : {
         label: "RECRUITER",
-        title: "Fast overview for hiring teams",
+        title: "Built for hiring teams",
         body:
-          "I’m open to AI Engineer, ML Engineer, and data analyst roles. I build production-minded ML systems, especially for healthcare workflows and NLP-driven applications.",
+          "Open to data science, analytics, and applied ML roles. I work on predictive systems, analytics dashboards, and automation pipelines used in healthcare and business decision-making.",
         ctaText: "Download Resume",
         ctaHref: "/resume.pdf",
       };
@@ -33,8 +34,8 @@ export default function PortfolioView({ visitorType, onSwitch }) {
       {/* HERO */}
       <section id="home" className="grid gap-8 lg:grid-cols-2">
         <div className="pt-4 sm:pt-6">
-          <div className="text-[11px] sm:text-xs tracking-[0.22em] text-muted">
-            AI ENGINEER + DATA ANALYST · HEALTHCARE AI · TORONTO, ON · OPEN TO ROLES
+          <div className="text-xs sm:text-sm font-medium tracking-[0.2em] text-muted">
+            APPLIED DATA & ANALYTICS · HEALTHCARE, BUSINESS & FINANCE · TORONTO, ON · OPEN TO ROLES
           </div>
 
           {/* Mobile-first type scale */}
@@ -43,30 +44,26 @@ export default function PortfolioView({ visitorType, onSwitch }) {
                        text-[44px] sm:text-6xl lg:text-6xl"
           >
             Khushnud builds{" "}
+            <br />
             <span
               className="gradient-text-pan font-semibold"
               style={{
                 backgroundImage: "linear-gradient(90deg, #E07A5F, #D6B77C, #E07A5F)",
               }}
             >
-              adaptive AI systems
+              applied data
             </span>{" "}
             <br />
-            for healthcare,
-            <br />
-            analytics, and
-            <br />
-            language intelligence.
+            systems that drive real-world decisions
           </h1>
 
-          <p className="mt-5 sm:mt-6 max-w-xl text-muted text-[15px] sm:text-base leading-relaxed">
-            Machine learning, data science, and analytics builder with hands-on
-            experience in NLP, RAG, and predictive modeling. Comfortable taking
-            models from idea to deployment-ready pipelines.
+          <p className="mt-5 sm:mt-6 max-w-xl text-muted text-[16px] sm:text-[17px] leading-relaxed">
+            I design predictive systems, analytics dashboards, and automation pipelines used 
+            in healthcare and business decision-making.
           </p>
 
           <p className="mt-5 sm:mt-6 text-sm font-semibold text-accent">
-            Scholarship / Award line · Hackathon win line
+            SciXchange Mentor · International Quarterfinalist Team
           </p>
 
           <div className="mt-7 sm:mt-8 flex flex-wrap gap-3">
@@ -104,7 +101,7 @@ export default function PortfolioView({ visitorType, onSwitch }) {
               <div className="h-11 w-11 overflow-hidden rounded-full bg-border" />
               <div>
                 <div className="font-semibold text-fg">Khushnud Ahmed</div>
-                <div className="text-sm text-muted">AI Engineer · Data Analyst</div>
+                <div className="text-sm text-muted">Applied Data (DS · Analytics · Pipelines)</div>
               </div>
             </div>
 
@@ -133,25 +130,25 @@ export default function PortfolioView({ visitorType, onSwitch }) {
             <KpiStat 
               value={7900} 
               suffix="+"
-              label="Healthcare records modeled" 
+              label="Healthcare records analyzed" 
             />
             
             <KpiStat
-              value={95}
+              value={70}
               suffix="%"
               ring
               ringMax={100}
               ringColorClass="stroke-orange-500/90 dark:stroke-orange-400/90"
-              label="Epilepsy prediction accuracy"
+              label="Readmission prediction (AUC)"
             />
 
             <KpiStat
-              value={40}
-              suffix="%"
+              value={50}
+              suffix="GB"
               ring
               ringMax={100}
               ringColorClass="stroke-teal-600/85 dark:stroke-teal-400/85"
-              label="Design iteration time reduced"
+              label="Multi-source datasets unified"
             />
           </Card>
         </div>
@@ -183,27 +180,16 @@ export default function PortfolioView({ visitorType, onSwitch }) {
       {/* PROJECTS */}
       <Section
         id="projects"
-        title="Applied AI Highlights"
-        subtitle="Applied AI and analytics work across healthcare, NLP, and scalable data systems."
+        title="Project Highlights"
+        subtitle="Predictive systems, decision dashboards, and data pipelines built across healthcare, business, and finance."
       >
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {[
-            { title: "Healthcare AI: Epilepsy Seizure Prediction" },
-            { title: "Stroke Risk Prediction on AWS" },
-            { title: "Alzheimer’s Stage Classification" },
-            { title: "RAG Scientific QA Assistant" },
-            { title: "Energy Analytics Pipeline" },
-            { title: "Sales & Profit Forecasting" },
-            { title: "Generative Design Prototyping" },
-            { title: "Entropy Biomarkers in Cancer" },
-            { title: "Document & Knowledge AI" },
-            { title: "Global Disease Burden Analyzer" },
-          ].map((p, i) => (
-            <Reveal key={p.title} delay={i * 45} y={12}>
-              {/* ✅ Correct prop shape: ProjectCard expects { project } */}
+          {projects.map((p, i) => (
+            <Reveal key={p.id ?? p.title} delay={i * 45} y={12}>
               <ProjectCard project={p} />
             </Reveal>
           ))}
+
         </div>
       </Section>
 
@@ -317,17 +303,12 @@ export default function PortfolioView({ visitorType, onSwitch }) {
             {
               title: "MSc, Data Science & Analytics",
               org: "Toronto Metropolitan University",
-              meta: "Vector Scholarship in AI · Hack the World Hackathon Winner · GPA: X/4.33",
+              meta: "GPA: 3.94/4.00",
             },
             {
-              title: "Graduate Certificate, AI & Machine Learning",
-              org: "Humber College",
-              meta: "Dean’s Honour List · Grade: 92.5%",
-            },
-            {
-              title: "BTech, Computer Science & Engineering",
-              org: "Your University",
-              meta: "CGPA: 9.2/10",
+              title: "BSc, Computer Science",
+              org: "SZABIST University - Dubai Campus",
+              meta: "GPA: 3.46/4.00",
             },
           ].map((e, i) => (
             <Reveal key={e.title} delay={i * 70} y={12}>

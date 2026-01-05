@@ -32,8 +32,8 @@ export default function Gate({ open, defaultChoice = "recruiter", onEnter }) {
             </h1>
 
             <p className="mx-auto mt-4 max-w-xl text-muted">
-              I tailor this portfolio for recruiters or students seeking ML support. Pick
-              your path to personalize the experience.
+              I tailor this portfolio so that recruiters see applied data and analytics work,
+              while students see the thinking behind it.
             </p>
           </div>
 

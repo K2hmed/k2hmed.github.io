@@ -129,13 +129,21 @@ export default function KpiStat({
                     />
                     <div className="relative text-3xl font-semibold tracking-tight text-fg">
                         {display}
-                        {suffix}
+                        {suffix ? (
+                          <span className="ml-[1px] align-top text-base font-semibold tracking-tight text-muted">
+                            {suffix}
+                          </span>
+                        ) : null}
                     </div>
                 </>
             ) : (
                 <div className="text-3xl font-semibold tracking-tight text-fg">
                     {display}
-                    {suffix}
+                    {suffix ? (
+                      <span className="ml-[1px] align-top text-base font-semibold tracking-tight text-muted">
+                        {suffix}
+                      </span>
+                    ) : null}
                 </div>
             )}
         </div>

@@ -78,10 +78,12 @@ export default function ProjectCard({ project }) {
       title: p.title ?? "Untitled Project",
       impact: p.impact ?? "Add a 1–2 line impact statement here.",
       chips: p.chips ?? ["ML", "NLP", "Healthcare"],
-      proof: p.proof ?? [
-        { label: "GitHub", href: p.github ?? "#" },
-        { label: "Demo", href: p.demo ?? "#" },
-      ],
+      proof:
+        p.proof ??
+        [
+          p.github ? { label: "GitHub", href: p.github } : null,
+          p.demo ? { label: "Demo", href: p.demo } : null,
+        ].filter(Boolean),
       details:
         p.details ??
         "Add a fuller description: problem, approach, stack, and measurable outcomes.",
