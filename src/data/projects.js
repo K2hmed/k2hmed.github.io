@@ -1,8 +1,15 @@
 // src/data/projects.js
+import readmissionImg from "../assets/projects/readmission.png";
+import jobAlertImg from "../assets/projects/job-alert.png";
+import reqToolImg from "../assets/projects/llm-requirements.png";
+import ttcImg from "../assets/projects/ttc-delay.png";
+import guardianImg from "../assets/projects/ai-guardian.png";
 export const projects = [
     {
       kicker: "CASE STUDY",
       title: "30-Day Hospital Readmission Prediction",
+      image: readmissionImg,
+      imageAlt: "Readmission prediction dashboard and model results preview",
       impact:
         "Built a predictive analytics system using multi-source healthcare data to identify patients at high risk of 30-day readmission, improving model performance by ~70% AUC.",
       chips: ["Predictive Modeling", "Data Integration", "Healthcare Analytics"],
@@ -25,6 +32,8 @@ export const projects = [
     {
       kicker: "CASE STUDY",
       title: "Job Alert Board Automation",
+      image: jobAlertImg,
+      imageAlt: "Automated job alert email example",
       impact:
         "Built an automated job monitoring pipeline that detects new postings early, filters by keyword/location, deduplicates results, and sends alerts via email and Slack.",
       chips: ["Automation Pipelines", "Data Ingestion", "Monitoring & Reliability"],
@@ -47,6 +56,8 @@ export const projects = [
     {
       kicker: "CASE STUDY",
       title: "LLM-Based Requirement Analysis Pipeline",
+      image: reqToolImg,
+      imageAlt: "LLM requirements analysis pipeline diagram",
       impact:
         "An LLM-powered pipeline that transforms requirement documents into structured user stories and QA-ready test cases, reducing manual analysis and review effort.",
       chips: ["LLM Pipelines", "Workflow Automation", "Product & QA Analytics"],
@@ -69,6 +80,8 @@ export const projects = [
     {
       kicker: "CASE STUDY",
       title: "TTC Delay Analysis",
+      image: ttcImg,
+      imageAlt: "TTC delay data visualization sample",
       impact:
         "Analyzed TTC delay patterns to surface recurring hotspots by route, time, and category, enabling clearer operational insights and reporting.",
       chips: ["Analytics", "Business Intelligence", "Time Series"],
@@ -91,6 +104,8 @@ export const projects = [
     {
       kicker: "CASE STUDY",
       title: "AI Guardian",
+      image: guardianImg,
+      imageAlt: "AI Guardian system architecture diagram",
       impact:
         "Designed a guardrailed AI assistant system with structured constraints, safety checks, and evaluation workflows to reduce unsafe or unreliable outputs.",
       chips: ["AI Safety", "Evaluation & Testing", "Systems Design"],
