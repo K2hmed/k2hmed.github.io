@@ -13,7 +13,7 @@ export const projects = [
       impact:
         "Built a predictive analytics system using multi-source healthcare data to identify patients at high risk of 30-day readmission, improving model performance by ~70% AUC.",
       chips: ["Predictive Modeling", "Data Integration", "Healthcare Analytics"],
-      github: "https://github.com/K2hmed/<REPO_NAME_HERE>",
+      github: "https://github.com/K2hmed/MRP",
       demo: null,
       details:
         "End-to-end readmission risk modeling using integrated clinical and geographic datasets to support earlier, more targeted interventions for high-risk patient cohorts.",
@@ -37,7 +37,7 @@ export const projects = [
       impact:
         "Built an automated job monitoring pipeline that detects new postings early, filters by keyword/location, deduplicates results, and sends alerts via email and Slack.",
       chips: ["Automation Pipelines", "Data Ingestion", "Monitoring & Reliability"],
-      github: "https://github.com/K2hmed/<REPO_NAME_HERE>",
+      github: "https://github.com/K2hmed/job_alert_board",
       demo: null,
       details:
         "A production-minded automation system that continuously scans Workday and non-Workday job boards, normalizes links and timestamps, and delivers reliable alerts with built-in health monitoring.",
@@ -61,7 +61,7 @@ export const projects = [
       impact:
         "An LLM-powered pipeline that transforms requirement documents into structured user stories and QA-ready test cases, reducing manual analysis and review effort.",
       chips: ["LLM Pipelines", "Workflow Automation", "Product & QA Analytics"],
-      github: "https://github.com/K2hmed/<REPO_NAME_HERE>",
+      github: "https://github.com/K2hmed/llm-user-stories-testcases-generator",
       demo: null,
       details:
         "A deterministic document-to-artifacts pipeline that transforms unstructured requirements into reviewable, traceable product and QA outputs.",
@@ -85,7 +85,7 @@ export const projects = [
       impact:
         "Analyzed TTC delay patterns to surface recurring hotspots by route, time, and category, enabling clearer operational insights and reporting.",
       chips: ["Analytics", "Business Intelligence", "Time Series"],
-      github: "https://github.com/K2hmed/<REPO_NAME_HERE>",
+      github: "https://github.com/K2hmed/Toronto-Transit-Delay-Analysis",
       demo: null,
       details:
         "End-to-end analytics pipeline that standardizes fragmented transit delay data and enables operational insights through BI dashboards.",
@@ -109,7 +109,7 @@ export const projects = [
       impact:
         "Designed a guardrailed AI assistant system with structured constraints, safety checks, and evaluation workflows to reduce unsafe or unreliable outputs.",
       chips: ["AI Safety", "Evaluation & Testing", "Systems Design"],
-      github: "https://github.com/K2hmed/<REPO_NAME_HERE>",
+      github: "https://github.com/K2hmed/Ai-Guardian",
       demo: null,
       details:
         "A safety-focused AI assistant design exploring guardrails, policy-aware behavior, and structured evaluation.",
