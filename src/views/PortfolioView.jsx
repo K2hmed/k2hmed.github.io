@@ -2,6 +2,7 @@ import React from "react";
 import Section from "../components/Section.jsx";
 import Card from "../components/Card.jsx";
 import VisitorToggle from "../components/VisitorToggle";
+import profileImg from "../assets/profile.png";
 import Reveal from "../components/Reveal.jsx";
 import ProjectCard from "../components/ProjectCard.jsx";
 import Magnetic from "../components/Magnetic.jsx";
@@ -100,7 +101,12 @@ export default function PortfolioView({ visitorType, onSwitch }) {
             <div className="text-xs tracking-widest text-muted">WHO’S VISITING?</div>
 
             <div className="mt-4 flex items-center gap-3">
-              <div className="h-11 w-11 overflow-hidden rounded-full bg-border" />
+              <img
+                src={profileImg}
+                alt="Khushnud Ahmed"
+                className="h-14 w-14 rounded-full object-cover ring-1 ring-white/15 shadow-md"
+                loading="lazy"
+              />
               <div>
                 <div className="font-semibold text-fg">Khushnud Ahmed</div>
                 <div className="text-sm text-muted">Applied Data (DS · Analytics · Pipelines)</div>
@@ -381,7 +387,7 @@ export default function PortfolioView({ visitorType, onSwitch }) {
       <Section
         id="contact"
         title="Let’s connect"
-        subtitle="Open to AI Engineer, ML Engineer, and data analyst roles. Available for tutoring support on ML projects."
+        /*subtitle="Open to AI Engineer, ML Engineer, and data analyst roles. Available for tutoring support on ML projects."*/
       >
         <div className="rounded-[28px] border border-border/70 bg-surface2/70 p-7 sm:p-8 text-fg shadow-soft backdrop-blur">
           <div className="grid gap-8 lg:grid-cols-2">
@@ -415,7 +421,7 @@ export default function PortfolioView({ visitorType, onSwitch }) {
       </Section>
 
       <footer className="pt-8 pb-16 text-sm text-muted">
-        Khushnud Ahmed · AI Engineer and Data Analyst
+        Khushnud Ahmed · Applied Data (DS · Analytics · Pipelines)
       </footer>
     </>
   );
