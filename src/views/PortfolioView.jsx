@@ -210,6 +210,19 @@ export default function PortfolioView({ visitorType, onSwitch }) {
         <div className="space-y-5">
           {[
             {
+              title: "Freelance Data Analyst (Project-Based)",
+              org: "Self-Directed · Toronto, ON",
+              dates: "Oct 2025 – Present",
+              description:
+                "Delivered end-to-end data analytics projects simulating real-world business and operational problems across healthcare, transportation, and revenue analytics. Focused on actionable insights, KPI tracking, and stakeholder-ready dashboards.",
+              bullets: [
+                "Analyzed structured datasets using SQL and Python to uncover trends, operational bottlenecks, and key performance drivers, improving data-driven decision-making.",
+                "Designed and implemented interactive Power BI dashboards to monitor KPIs, track performance, and surface actionable insights for executive-style reporting.",
+                "Translated complex analytical results into clear, concise summaries and visualizations, enabling stakeholders to make informed business decisions efficiently.",
+                "Applied industry-standard data cleaning, validation, and feature engineering practices to ensure high-quality, reproducible analysis across multiple domains.",
+              ],
+            },
+            {
               title: "Data Science Mentor",
               org: "SciXchange · Toronto, ON",
               dates: "Jan 2025 – May 2025",
