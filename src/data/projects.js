@@ -4,6 +4,7 @@ import jobAlertImg from "../assets/projects/job-alert.png";
 import reqToolImg from "../assets/projects/llm-requirements.png";
 import ttcImg from "../assets/projects/ttc-delay.png";
 import guardianImg from "../assets/projects/ai-guardian.png";
+import churnImg from "../assets/projects/customer-churn.png";
 export const projects = [
     {
       kicker: "CASE STUDY",
@@ -98,6 +99,30 @@ export const projects = [
         "Ingested and standardized 12 Excel files (bus + subway) into a single long-format dataset (~600K+ records) with consistent schemas.",
         "Engineered temporal and categorical features (peak periods, incident classes, time-of-day) to support operational and time-series analysis.",
         "Enabled Tableau and Power BI dashboards for route-level, mode-level, and peak vs off-peak performance insights.",
+      ],
+    },
+
+    {
+      kicker: "CASE STUDY",
+      title: "Customer Churn Analytics & ML Scoring",
+      image: churnImg,
+      imageAlt: "Customer churn analytics and ML scoring dashboard preview",
+      impact:
+        "Built an end-to-end churn analytics and ML pipeline using Snowflake, Python, and Power BI to surface churn drivers, assess model performance, and flag high-risk customers.",
+      chips: ["Analytics", "Machine Learning", "Business Intelligence"],
+      github: "https://github.com/K2hmed/MRP",
+      demo: null,
+      details:
+        "End-to-end analytics and machine learning pipeline that operationalizes customer churn prediction using warehouse-native transformations, model scoring writeback, and executive-ready BI dashboards.",
+      whatBuilt:
+      "A production-aligned analytics platform that ingests raw customer data, standardizes it through Snowflake warehouse layers, trains and evaluates a churn prediction model in Python, and writes scored predictions back into the warehouse for downstream BI consumption.",
+      outcome:
+      "Delivered executive and operational Power BI dashboards that quantify churn drivers, track model performance (ROC AUC, PR AUC, threshold), and surface the highest-risk customers using ML probability scores.",
+      stack: ["Python", "Snowflake", "SQL", "Power BI", "scikit-learn", "DuckDB", "AWS"],
+      bullets: [
+        "Designed a production-style Snowflake analytics architecture (RAW → STG → ANALYTICS) with curated semantic views powering both executive KPIs and operational dashboards in Power BI.",
+        "Built and operationalized a churn prediction pipeline in Python, training and evaluating an ML model (ROC AUC ≈ 0.84, PR AUC ≈ 0.64) and writing scored predictions and run metadata back into Snowflake.",
+        "Delivered decision-ready Power BI dashboards that quantify churn drivers and surface the highest-risk customers using ML probability scores, enabling actionable retention targeting rather than static reporting.",
       ],
     },
 
