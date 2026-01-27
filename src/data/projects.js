@@ -5,6 +5,7 @@ import reqToolImg from "../assets/projects/llm-requirements.png";
 import ttcImg from "../assets/projects/ttc-delay.png";
 import guardianImg from "../assets/projects/ai-guardian.png";
 import churnImg from "../assets/projects/customer-churn.png";
+import ecommerceImg from "../assets/projects/ecommerce.png";
 export const projects = [
     {
       kicker: "CASE STUDY",
@@ -123,6 +124,30 @@ export const projects = [
         "Designed a production-style Snowflake analytics architecture (RAW → STG → ANALYTICS) with curated semantic views powering both executive KPIs and operational dashboards in Power BI.",
         "Built and operationalized a churn prediction pipeline in Python, training and evaluating an ML model (ROC AUC ≈ 0.84, PR AUC ≈ 0.64) and writing scored predictions and run metadata back into Snowflake.",
         "Delivered decision-ready Power BI dashboards that quantify churn drivers and surface the highest-risk customers using ML probability scores, enabling actionable retention targeting rather than static reporting.",
+      ],
+    },
+
+    {
+      kicker: "CASE STUDY",
+      title: "E-Commerce Analytics Platform",
+      image: ecommerceImg,
+      imageAlt: "E-commerce analytics platform dashboard preview",
+      impact:
+        "Built a production-grade analytics platform unifying e-commerce revenue, order lifecycle, and performance across ~100K orders, enabling leaders to spot key risk.",
+      chips: ["Analytics Engineering", "Revenue Ops", "Exec KPIs"],
+      github: "https://github.com/K2hmed/MRP",
+      demo: null,
+      details:
+        "An end-to-end analytics case study modeling real enterprise workflows, from Snowflake data modeling and KPI validation to executive-ready Power BI reporting.",
+      whatBuilt:
+        "A Snowflake-based dimensional warehouse (RAW → STG → ANALYTICS) connected to a Power BI semantic model, delivering executive dashboards across revenue, order lifecycle, delivery performance, product categories, and customer geography.",
+      outcome:
+        "Delivered a trusted, end-to-end analytics layer that standardized revenue and operational KPIs, enabling leadership to track revenue drivers, monitor delivery performance, and pinpoint geographic and category-level risk areas for operational and commercial decision-making.",
+      stack: ["Snowflake", "SQL", "Analytics Engineering", "Advanced DAX", "AWS", "Jira"],
+      bullets: [
+        "Designed and validated a Snowflake star schema (RAW → STG → ANALYTICS) to ensure consistent, audit-ready revenue and order KPIs across all reporting layers.",
+        "Implemented advanced DAX measures (MoM growth, delivery rates, delay distributions) to quantify operational risk and trend shifts without inflating metrics.",
+        "Delivered executive dashboards that surfaced geographic delivery bottlenecks and category-level revenue concentration, supporting data-backed logistics and merchandising discussions.",
       ],
     },
 
