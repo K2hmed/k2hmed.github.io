@@ -111,7 +111,7 @@ export const projects = [
       impact:
         "Built an end-to-end churn analytics and ML pipeline using Snowflake, Python, and Power BI to surface churn drivers, assess model performance, and flag high-risk customers.",
       chips: ["Analytics", "Machine Learning", "Business Intelligence"],
-      github: "https://github.com/K2hmed/MRP",
+      github: "https://github.com/K2hmed/snowflake-churn-warehouse",
       demo: null,
       details:
         "End-to-end analytics and machine learning pipeline that operationalizes customer churn prediction using warehouse-native transformations, model scoring writeback, and executive-ready BI dashboards.",
